@@ -12,16 +12,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cleanerella</title>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
     <style>
         /* Fonts */
         @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
         /* Reset & Base */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: 'Playfair Display', serif;
-            background-color: #f4f4f9;
+            font-family: 'Montserrat', 'Playfair Display', serif;
+            background: linear-gradient(135deg, #f4f4f9 0%, #e0e7ff 100%);
             color: #333;
             display: flex;
             flex-direction: column;
@@ -29,51 +32,165 @@
             transition: background-color 0.3s, color 0.3s;
         }
 
-        /* Header */
+        /* Header & Hero */
         header {
-            background: linear-gradient(45deg, #6a5acd, #836fff);
-            background-size: 200% 200%;
-            padding: 20px;
-            text-align: center;
-            color: white;
-            animation: gradientShift 10s ease infinite;
             position: relative;
+            background: linear-gradient(120deg, #6a5acd 60%, #00eaff 100%);
+            overflow: hidden;
+            padding: 0;
         }
-        @keyframes gradientShift {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+        .bubble-bg {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            z-index: 1;
+            pointer-events: none;
+        }
+        .bubble {
+            position: absolute;
+            border-radius: 50%;
+            background: radial-gradient(circle at 35% 35%, #fff 80%, #e0e7ff 100%);
+            box-shadow:
+                0 8px 32px #6a5acd33,
+                0 2px 8px #00eaff22,
+                0 0 0 2px #e0e7ff66 inset,
+                0 0 24px 4px #fff8,
+                0 0 60px 0 #b3c6ff44 inset;
+            opacity: 0.85;
+            animation: floatBubble 16s linear infinite;
+            filter: blur(0.5px) saturate(1.3) drop-shadow(0 2px 12px #b3c6ff88);
+            transition: box-shadow 0.3s, filter 0.3s;
+        }
+        .bubble::after {
+            content: '';
+            position: absolute;
+            left: 18%; top: 16%;
+            width: 32%; height: 28%;
+            background: radial-gradient(circle, #fff 90%, #fff0 100%);
+            border-radius: 50%;
+            opacity: 0.8;
+            filter: blur(2.5px);
+        }
+        .bubble::before {
+            content: '';
+            position: absolute;
+            right: 10%; bottom: 12%;
+            width: 22%; height: 18%;
+            background: radial-gradient(circle, #e0e7ffcc 60%, #fff0 100%);
+            border-radius: 50%;
+            opacity: 0.5;
+            filter: blur(3px);
+        }
+        .bubble.foam {
+            background: radial-gradient(circle at 40% 40%, #fff 95%, #e0e7ff 100%);
+            box-shadow:
+                0 2px 8px #fff8,
+                0 0 0 2px #e0e7ff99 inset,
+                0 0 24px 8px #fff8,
+                0 0 60px 0 #b3c6ff44 inset;
+            opacity: 0.95;
+            filter: blur(1.2px) saturate(1.5);
+        }
+        @keyframes floatBubble {
+            0% {
+                transform: translateY(100vh) scale(1);
+                opacity: 0.7;
+            }
+            80% {
+                opacity: 0.8;
+            }
+            100% {
+                transform: translateY(-120px) scale(1.1);
+                opacity: 0;
+            }
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            padding: 60px 20px 40px 20px;
+            text-align: center;
+        }
+        .logo {
+            width: 90px; height: 90px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #fff 60%, #e0e7ff 100%);
+            box-shadow: 0 4px 24px rgba(106,90,205,0.2);
+            display: flex; align-items: center; justify-content: center;
+            margin: 0 auto 20px auto;
+            border: 4px solid #6a5acd;
+        }
+        .logo i {
+            font-size: 2.5em;
+            color: #6a5acd;
         }
         header h1 {
             font-family: 'Great Vibes', cursive;
-            font-size: 3em;
+            font-size: 7em;
+            color: #fff;
+            text-shadow:
+                0 4px 32px #00eaffcc,
+                0 1px 0 #6a5acd,
+                0 0 60px #fff8,
+                0 8px 32px #6a5acd44;
+            margin-bottom: 18px;
+            letter-spacing: 0.06em;
+            font-weight: 700;
             animation: glow 2s infinite alternate;
+            filter: drop-shadow(0 8px 32px #00eaff66) drop-shadow(0 2px 8px #6a5acd44);
         }
         @keyframes glow {
             0% { text-shadow: 0 0 10px #00ffff; }
-            100% { text-shadow: 0 0 20px #00ffff; }
+            100% { text-shadow: 0 0 30px #00eaff, 0 1px 0 #6a5acd; }
         }
-        header p { font-style: italic; }
+        header p {
+            font-style: italic;
+            color: #e0e7ff;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        .hero-wave {
+            position: absolute; bottom: -1px; left: 0; width: 100%; height: 60px;
+            z-index: 2;
+        }
 
         /* Dark mode toggle */
         .toggle-button {
             position: absolute;
-            top: 20px; right: 20px;
-            background: none; border: none; cursor: pointer;
+            top: 25px; right: 30px;
+            background: rgba(255,255,255,0.2); border: none; cursor: pointer;
+            border-radius: 50%;
+            box-shadow: 0 2px 8px #6a5acd33;
+            z-index: 10;
+            transition: background 0.3s;
         }
-        .toggle-button img { width:30px; height:30px; }
+        .toggle-button:hover {
+            background: rgba(0,234,255,0.2);
+        }
+        .toggle-button i {
+            font-size: 1.5em; color: #fff;
+            padding: 10px;
+        }
 
         /* Nav */
         nav {
             position: sticky; top: 0; width: 100%;
-            background-color: rgba(131, 111, 255, 0.8);
-            backdrop-filter: blur(10px);
+            background: rgba(255,255,255,0.25);
+            backdrop-filter: blur(12px);
             display: flex; justify-content: center;
-            padding: 15px; z-index: 1000;
+            padding: 18px 0 12px 0; z-index: 1000;
+            box-shadow: 0 2px 12px #6a5acd11;
+            gap: 18px;
         }
         nav a {
-            margin: 0 15px; color: white; text-decoration: none;
-            font-weight: bold; position: relative; overflow: hidden;
+            display: flex; align-items: center; gap: 7px;
+            padding: 8px 18px;
+            color: #6a5acd;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+            border-radius: 8px;
+            background: rgba(255,255,255,0.15);
+            box-shadow: 0 2px 8px #6a5acd11;
+            transition: background 0.3s, color 0.3s, transform 0.2s;
             opacity: 0; transform: translateY(-10px);
             animation: navLinkFade 0.6s forwards ease;
         }
@@ -85,23 +202,22 @@
         @keyframes navLinkFade {
             to { opacity:1; transform:translateY(0); }
         }
-        nav a::after {
-            content: ''; position: absolute; bottom: -2px; left:0;
-            width: 100%; height:2px; background:white;
-            transform: translateX(-100%); transition: transform 0.4s ease;
+        nav a:hover {
+            background: linear-gradient(90deg,#6a5acd 60%,#00eaff 100%);
+            color: #fff;
+            transform: scale(1.08);
         }
-        nav a:hover::after { transform: translateX(0); }
-        nav a:hover { color: #4b0082; transform: scale(1.1); }
 
         /* Main container */
         .container {
             flex:1; padding: 100px 20px 20px;
             display:flex; flex-direction:column; align-items:center;
+            background: transparent;
         }
         .container section {
-            max-width:800px; width:100%; margin:20px 0;
-            padding:20px; background:#fff; border-radius:10px;
-            box-shadow:0 4px 8px rgba(0,0,0,0.1); text-align:center;
+            max-width:800px; width:100%; margin:30px 0;
+            padding:32px 24px; background:rgba(255,255,255,0.95); border-radius:18px;
+            box-shadow:0 8px 32px rgba(106,90,205,0.10); text-align:center;
             opacity:0; transform:translateY(20px);
             transition: background-color 0.3s, opacity 0.6s ease-out, transform 0.6s ease-out;
         }
@@ -111,12 +227,13 @@
         .container section h2,
         .container section h3 {
             position:relative; display:inline-block; overflow:hidden;
+            font-family: 'Playfair Display', serif;
         }
         .container section h2::after,
         .container section h3::after {
             content:''; position:absolute; left:0; bottom:-2px;
             width:100%; height:3px;
-            background:linear-gradient(to right,#6a5acd,#836fff);
+            background:linear-gradient(to right,#6a5acd,#00eaff);
             transform:translateX(-100%); transition:transform 0.5s;
         }
         .container section h2:hover::after,
@@ -124,12 +241,46 @@
             transform:translateX(0);
         }
 
+        /* Service Icons */
+        .service-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 24px;
+            margin: 30px 0 0 0;
+        }
+        .service-item {
+            background: linear-gradient(135deg, #e0e7ff 60%, #fff 100%);
+            border-radius: 14px;
+            box-shadow: 0 2px 12px #6a5acd11;
+            padding: 22px 18px 18px 18px;
+            width: 220px;
+            text-align: center;
+            margin-bottom: 10px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .service-item:hover {
+            transform: translateY(-6px) scale(1.04);
+            box-shadow: 0 8px 32px #6a5acd33;
+        }
+        .service-item i {
+            font-size: 2.2em;
+            color: #6a5acd;
+            margin-bottom: 10px;
+        }
+        .service-item strong {
+            display: block;
+            margin-bottom: 6px;
+            font-size: 1.1em;
+        }
+
         /* Button */
         .futuristic-button {
             display:inline-block; padding:15px 30px; font-size:18px;
-            color:#fff; background:linear-gradient(45deg,#6a5acd,#836fff);
-            border:none; border-radius:10px; text-decoration:none;
+            color:#fff; background:linear-gradient(45deg,#6a5acd,#00eaff);
+            border:none; border-radius:12px; text-decoration:none;
             position:relative; overflow:hidden;
+            box-shadow: 0 4px 16px #6a5acd33;
             transition: background 0.5s, box-shadow 0.5s, transform 0.3s ease;
         }
         .futuristic-button::before {
@@ -142,9 +293,9 @@
             left:100%;
         }
         .futuristic-button:hover {
-            background:linear-gradient(45deg,#483d8b,#6a5acd);
-            box-shadow:0 0 10px #483d8b,0 0 20px #483d8b;
-            transform:translateY(-3px) scale(1.02);
+            background:linear-gradient(45deg,#483d8b,#00eaff);
+            box-shadow:0 0 18px #00eaff,0 0 32px #6a5acd;
+            transform:translateY(-3px) scale(1.04);
         }
 
         /* Lists */
@@ -152,25 +303,58 @@
 
         /* Images */
         .image-section img {
-            width:100%; border-radius:10px; margin:20px 0;
+            width:100%; border-radius:14px; margin:20px 0;
+            box-shadow: 0 4px 24px #6a5acd22;
+        }
+
+        /* SVG Wave Dividers */
+        .svg-divider {
+            width: 100%;
+            display: block;
+            margin: 0;
+            line-height: 0;
         }
 
         /* Footer */
         footer {
-            background-color:#6a5acd; padding:20px; text-align:center; color:white;
+            background: linear-gradient(90deg,#6a5acd 60%,#00eaff 100%);
+            padding:32px 10px 18px 10px; text-align:center; color:white;
+            position: relative;
+        }
+        .footer-social {
+            margin: 18px 0 0 0;
+        }
+        .footer-social a {
+            color: #fff;
+            margin: 0 10px;
+            font-size: 1.5em;
+            transition: color 0.2s;
+        }
+        .footer-social a:hover {
+            color: #00eaff;
         }
 
         /* Dark Mode */
         body.dark-mode {
-            background-color:#121212; color:#e0e0e0;
+            background: linear-gradient(135deg, #121212 0%, #232946 100%);
+            color:#e0e0e0;
         }
         body.dark-mode nav {
-            background-color:rgba(67,0,131,0.8);
+            background: rgba(67,0,131,0.25);
         }
         body.dark-mode .container section {
-            background-color:#1f1f1f;
+            background-color:#1f1f2f;
         }
-    
+        body.dark-mode .service-item {
+            background: linear-gradient(135deg, #232946 60%, #1f1f2f 100%);
+        }
+        body.dark-mode .futuristic-button {
+            background:linear-gradient(45deg,#232946,#6a5acd);
+        }
+        body.dark-mode footer {
+            background: linear-gradient(90deg,#232946 60%,#6a5acd 100%);
+        }
+
         /* Responsive adjustments */
         input[type="text"], input[type="email"], textarea {
             width: 100%;
@@ -180,26 +364,57 @@
         nav {
             flex-wrap: wrap;
         }
+        @media (max-width: 1200px) {
+            header h1 { font-size: 5em; }
+        }
+        @media (max-width: 900px) {
+            header h1 { font-size: 3.5em; }
+        }
+        @media (max-width: 600px) {
+            header h1 { font-size: 2.2em; }
+        }
+        @media (max-width: 900px) {
+            .service-list { flex-direction: column; align-items: center; }
+            .service-item { width: 90%; }
+        }
         @media (max-width: 768px) {
             header h1 { font-size: 2.5em; }
-            header p { font-size: 0.9em; }
+            .hero-content { padding: 40px 10px 20px 10px; }
             nav { padding: 10px; }
-            nav a { margin: 5px; font-size: 0.9em; }
+            nav a { margin: 5px; font-size: 0.95em; }
             .container { padding: 80px 10px 10px; }
             .futuristic-button { width: 100%; }
         }
         @media (max-width: 480px) {
             header h1 { font-size: 2em; }
-            header p { font-size: 0.8em; }
+            .logo { width: 60px; height: 60px; }
+            .hero-content { padding: 30px 5px 10px 5px; }
             nav a { flex: 1 1 100%; text-align: center; margin: 5px 0; }
             .container section { padding: 15px; }
         }
-</style>
+    </style>
     <script>
         function toggleDarkMode() {
             document.body.classList.toggle('dark-mode');
         }
         document.addEventListener('DOMContentLoaded', () => {
+            // Bubble animation
+            const bubbleBg = document.getElementById('bubble-bg');
+            if (bubbleBg) {
+                const bubbleCount = 18;
+                for (let i = 0; i < bubbleCount; i++) {
+                    const bubble = document.createElement('div');
+                    bubble.className = 'bubble' + (Math.random() > 0.6 ? ' foam' : '');
+                    const size = Math.random() * 60 + 40;
+                    bubble.style.width = `${size}px`;
+                    bubble.style.height = `${size}px`;
+                    bubble.style.left = `${Math.random() * 100}%`;
+                    bubble.style.animationDuration = `${12 + Math.random() * 8}s`;
+                    bubble.style.animationDelay = `${-Math.random() * 16}s`;
+                    bubbleBg.appendChild(bubble);
+                }
+            }
+            // Section fade-in
             const sections = document.querySelectorAll('.container section');
             const observer = new IntersectionObserver((entries, obs) => {
                 entries.forEach(entry => {
@@ -215,20 +430,27 @@
 </head>
 <body>
     <header>
-        <h1>Cleanerella</h1>
-        <p>Elevate Your Cleaning Experience with Cleanerella's Exceptional Service</p>
-        <p><em>Working magic on your mess</em></p>
-        <button class="toggle-button" onclick="toggleDarkMode()">
-            <img src="moon.png" alt="Toggle Dark Mode">
-        </button>
+        <div class="bubble-bg" id="bubble-bg"></div>
+        <div class="hero-content">
+            <!-- Removed the logo icon above the title -->
+            <h1>Cleanerella</h1>
+            <p>Elevate Your Cleaning Experience with Cleanerella's Exceptional Service</p>
+            <p><em>Working magic on your mess</em></p>
+            <button class="toggle-button" onclick="toggleDarkMode()">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+        </div>
+        <div class="hero-wave">
+            <!-- SVG divider removed previously -->
+        </div>
     </header>
 
     <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About Us</a>
-        <a href="#services">Services</a>
-        <a href="#book">Book an Appointment</a>
-        <a href="#contact">Contact</a>
+        <a href="#home"><i class="fa-solid fa-house"></i> Home</a>
+        <a href="#about"><i class="fa-solid fa-users"></i> About Us</a>
+        <a href="#services"><i class="fa-solid fa-sparkles"></i> Services</a>
+        <a href="#book"><i class="fa-solid fa-calendar-check"></i> Book</a>
+        <a href="#contact"><i class="fa-solid fa-envelope"></i> Contact</a>
     </nav>
 
     <div class="container" id="home">
@@ -240,57 +462,58 @@
             </div>
         </section>
 
-  <style>
-    /* Add 1.5em space below each of these paragraphs */
-    .spaced {
-      margin-bottom: 1.5em;
-    }
-  </style>
-        <section id="about">
-            <h2>About Us</h2>
-            <p class="spaced">
-    Cleanerella LLC is a women-owned cleaning company with over 15 years of experience. Built on a foundation of dedication, hard work, and high standards, we've become a trusted name in residential and commercial cleaning.
-  </p>
-  <p class="spaced">
-    We believe a clean space promotes comfort, health, and peace of mind. That's why we deliver detailed, professional service tailored to your unique needs every time.
-  </p>
-  <p class="spaced">
-    Customer satisfaction is at the heart of what we do. We take the time to understand your priorities and build lasting relationships based on trust, reliability, and respect.
-  </p>
-  <p class="spaced">
-    As proud members of the community we're committed to creating cleaner and healthier spaces one job at a time.
-  </p>
-  <p class="spaced">
-    Experience the Cleanerella difference.
-  </p>
+        <section id="about" style="margin-top: 40px; margin-bottom: 40px; padding: 36px 28px; line-height: 1.8;">
+            <h2 style="margin-bottom: 24px;">About Us</h2>
+            <p style="margin-bottom: 18px;">Welcome to Cleanerella LLC., a proud women-owned and family-operated cleaning business with deep roots in our community. What began as a small family venture has grown into a trusted name in cleaning services, built on generations of dedication, hard work, and an unwavering commitment to excellence.</p>
+            <p style="margin-bottom: 18px;">At Cleanerella LLC., we believe that a clean space is more than just appearance. It’s about creating comfort, health, and peace of mind. That’s why we go above and beyond to provide thorough, detailed cleanings with a professional touch. Whether it's your home, office, or business, we treat every space with the care and precision we would our own.</p>
+            <p style="margin-bottom: 18px;">We pride ourselves on being customer-focused and relationship-driven. We take the time to understand each client’s needs and tailor our services accordingly. Our team is committed not only to delivering exceptional results, but also to building lasting relationships rooted in trust, reliability, and respect.</p>
+            <p style="margin-bottom: 18px;">As active community members and long-time service providers, we see our work as a way to give back by helping our local neighbors enjoy cleaner, healthier environments. When you choose Cleanerella LLC., you’re not just hiring a cleaning crew but a hardworking family of professionals who genuinely cares.</p>
+            <p style="margin-bottom: 0;">Let us show you what a difference our experience, dedication, and personal touch can make.</p>
         </section>
 
         <section id="services">
             <h3>Our Services</h3>
-            <p class="spaced">
-      At Cleanerella LLC., we bring professional, detail driven cleaning to every job. Backed by over 15 years of combined experience and a deep commitment to serving our community with excellence.
-    </p>
-    <ul class="spaced">
-      <li class="spaced"><strong>Residential Cleaning</strong><br>Routine or deep cleaning at your home gets the care and attention it deserves.</li>
-      <li class="spaced"><strong>Commercial Cleaning</strong><br>Keep your workspace clean, safe, and welcoming with tailored services for offices, shops, and more.</li>
-      <li class="spaced"><strong>Rental Property Turnovers</strong><br>Quick and reliable cleanings for vacation rentals, Airbnb properties, and long-term units to get your space guest-ready in no time.</li>
-      <li class="spaced"><strong>Event Space Cleaning</strong><br>Pre-event prep and post-event cleanup to make your event shine from start to finish.</li>
-      <li class="spaced"><strong>Church &amp; Faith-Based Organization Cleaning</strong><br>Respectful, thorough service for sacred spaces.</li>
-      <li class="spaced"><strong>Move-In / Move-Out Cleaning</strong><br>Make your move easier with a spotless start or a polished goodbye.</li>
-    </ul>
-
-    <h3 class="spaced">Special Offers Available!</h3>
-    <p class="spaced">We’re proud to offer exclusive discounts for:</p>
-    <ul class="spaced">
-      <li class="spaced">Churches &amp; places of worship</li>
-      <li class="spaced">Event venues &amp; gathering spaces</li>
-      <li class="spaced">Property managers &amp; rental hosts</li>
-    </ul>
-
-    <p class="spaced">
-      📞 Contact us today for a <strong>FREE consultation</strong> and ask about our tailored service packages and special pricing.  
-      We're here to help you find the perfect cleaning solution for your space on a low budget.
-    </p>
+            <p>At Cleanerella LLC., we bring professional, detail-driven cleaning to every job—backed by a deep commitment to serving our community with excellence.</p>
+            <div class="service-list">
+                <div class="service-item">
+                    <i class="fa-solid fa-house-chimney"></i>
+                    <strong>Residential Cleaning</strong>
+                    <span>Routine or deep cleaning ensuring your home gets the care and attention it deserves.</span>
+                </div>
+                <div class="service-item">
+                    <i class="fa-solid fa-building"></i>
+                    <strong>Commercial Cleaning</strong>
+                    <span>Keep your workspace clean, safe, and welcoming with tailored services for offices, shops, and more.</span>
+                </div>
+                <div class="service-item">
+                    <i class="fa-solid fa-key"></i>
+                    <strong>Rental Property Turnovers</strong>
+                    <span>Quick and reliable cleanings for vacation rentals, Airbnb properties, and storage units. Get your spaces guest-ready in no time.</span>
+                </div>
+                <div class="service-item">
+                    <i class="fa-solid fa-champagne-glasses"></i>
+                    <strong>Event Space Cleaning</strong>
+                    <span>Pre-event prep and post-event cleanup. We help make your event shine from start to finish.</span>
+                </div>
+                <div class="service-item">
+                    <i class="fa-solid fa-church"></i>
+                    <strong>Church & Faith-Based Organization Cleaning</strong>
+                    <span>Respectful, thorough service for sacred spaces.</span>
+                </div>
+                <div class="service-item">
+                    <i class="fa-solid fa-truck-moving"></i>
+                    <strong>Move-In / Move-Out Cleaning</strong>
+                    <span>Make your move easier with a spotless start or a polished goodbye.</span>
+                </div>
+            </div>
+            <h3 style="margin-top:40px;">Special Offers Available!</h3>
+            <p>We’re proud to offer exclusive discounts for:</p>
+            <ul style="margin-bottom: 0;">
+                <li>Churches & places of worship</li>
+                <li>Event venues & gathering spaces</li>
+                <li>Property managers & rental hosts</li>
+            </ul>
+            <p>📞 Contact us today for a <strong>FREE consultation</strong> and ask about our tailored service packages and special pricing. We're here to help you find the perfect cleaning solution for your space and your budget.</p>
         </section>
 
         <section id="book">
@@ -299,18 +522,23 @@
                 <input type="text" name="name" placeholder="Your Name" required><br><br>
                 <input type="email" name="email" placeholder="Your Email" required><br><br>
                 <textarea name="message" placeholder="What would you like cleaned?" rows="5" required></textarea><br><br>
-                <button type="submit" class="futuristic-button">Send Booking Request</button>
+                <button type="submit" class="futuristic-button"><i class="fa-solid fa-paper-plane"></i> Send Booking Request</button>
             </form>
             <p id="booking-response" style="margin-top:10px;"></p>
         </section>
     </div>
 
     <footer id="contact">
-        <p>© 2024-2025 Cleanerella LLC. All Rights Reserved.</p>
+        <p>© 2025 Cleanerella LLC. All Rights Reserved.</p>
         <p>Contact us</p>
         <p>Email: <a href="mailto:cleanerella55@gmail.com" style="color:white;">cleanerella55@gmail.com</a></p>
         <p>Phone: <a href="tel:757-932-4827" style="color: white;">757-932-4827</a></p>
-    <div class="social-links"><a href="https://www.instagram.com/cleanerellallc?igsh=cWo5ZWhyMTVnYTB5" target="_blank">Follow us on Instagram</a></div></footer>
+        <div class="footer-social">
+            <a href="https://www.instagram.com/cleanerellallc?igsh=cWo5ZWhyMTVnYTB5" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="mailto:cleanerella55@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+            <a href="tel:757-932-4827" title="Phone"><i class="fa-solid fa-phone"></i></a>
+        </div>
+    </footer>
 
     <!-- EmailJS -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
