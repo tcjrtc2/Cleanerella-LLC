@@ -179,6 +179,13 @@
             padding: 18px 0 12px 0; z-index: 1000;
             box-shadow: 0 2px 12px #6a5acd11;
             gap: 18px;
+            transition: transform 0.5s cubic-bezier(0.77,0,0.175,1), opacity 0.5s;
+        }
+        nav.collapsed {
+            transform: translateY(-120%);
+            opacity: 0;
+            pointer-events: none;
+            transition: transform 0.5s cubic-bezier(0.77,0,0.175,1), opacity 0.5s;
         }
         nav a {
             display: flex; align-items: center; gap: 7px;
@@ -425,6 +432,25 @@
                 });
             }, { threshold: 0.2 });
             sections.forEach(sec => observer.observe(sec));
+
+            // Nav collapse on scroll
+            const nav = document.querySelector('nav');
+            let lastScrollY = window.scrollY;
+            let ticking = false;
+            function handleNavCollapse() {
+                if (window.scrollY > nav.offsetTop + nav.offsetHeight) {
+                    nav.classList.add('collapsed');
+                } else {
+                    nav.classList.remove('collapsed');
+                }
+                ticking = false;
+            }
+            window.addEventListener('scroll', function() {
+                if (!ticking) {
+                    window.requestAnimationFrame(handleNavCollapse);
+                    ticking = true;
+                }
+            });
         });
     </script>
 </head>
@@ -443,15 +469,15 @@
         <div class="hero-wave">
             <!-- SVG divider removed previously -->
         </div>
+        <!-- Move nav bar here, below hero-content -->
+        <nav>
+            <a href="#home"><i class="fa-solid fa-house"></i> Home</a>
+            <a href="#about"><i class="fa-solid fa-users"></i> About Us</a>
+            <a href="#services"><i class="fa-solid fa-sparkles"></i> Services</a>
+            <a href="#book"><i class="fa-solid fa-calendar-check"></i> Book</a>
+            <a href="#contact"><i class="fa-solid fa-envelope"></i> Contact</a>
+        </nav>
     </header>
-
-    <nav>
-        <a href="#home"><i class="fa-solid fa-house"></i> Home</a>
-        <a href="#about"><i class="fa-solid fa-users"></i> About Us</a>
-        <a href="#services"><i class="fa-solid fa-sparkles"></i> Services</a>
-        <a href="#book"><i class="fa-solid fa-calendar-check"></i> Book</a>
-        <a href="#contact"><i class="fa-solid fa-envelope"></i> Contact</a>
-    </nav>
 
     <div class="container" id="home">
         <section>
