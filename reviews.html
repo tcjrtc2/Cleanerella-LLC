@@ -1,0 +1,2909 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NP2KTM5G');</script>
+    <!-- End Google Tag Manager -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verified Customer Reviews - Cleanerella</title>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+    <style>
+        /* Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+        /* Reset & Base */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Montserrat', 'Playfair Display', serif;
+            background: linear-gradient(135deg, #f4f4f9 0%, #e0e7ff 100%);
+            color: #333;
+            min-height: 100vh;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(120deg, #6a5acd 60%, #00eaff 100%);
+            padding: 20px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1em;
+            font-weight: 600;
+            padding: 10px 20px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+        
+        .back-button:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateX(-5px);
+        }
+        
+        .page-title {
+            text-align: center;
+            margin-top: 30px;
+        }
+        
+        .page-title h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 4em;
+            color: #fff;
+            text-shadow: 0 4px 32px #00eaffcc, 0 1px 0 #6a5acd;
+            margin-bottom: 10px;
+        }
+        
+        .page-title p {
+            color: #e0e7ff;
+            font-size: 1.2em;
+            font-style: italic;
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        /* Reviews Summary */
+        .reviews-summary {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 40px;
+            text-align: center;
+            box-shadow: 0 8px 32px rgba(106, 90, 205, 0.1);
+        }
+        
+        .overall-rating {
+            font-size: 3.5em;
+            font-weight: bold;
+            color: #6a5acd;
+            margin-bottom: 10px;
+        }
+        
+        .rating-stars {
+            font-size: 2.5em;
+            color: #ffd700;
+            margin-bottom: 15px;
+        }
+        
+        .rating-count {
+            font-size: 1.2em;
+            color: #666;
+            margin-bottom: 25px;
+        }
+        
+        .verified-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(135deg, #e0e7ff 0%, #f0f4ff 100%);
+            padding: 15px 25px;
+            border-radius: 50px;
+            border-left: 4px solid #6a5acd;
+            font-weight: 600;
+            color: #6a5acd;
+        }
+        
+        .verified-badge i {
+            font-size: 1.5em;
+            color: #ffd700;
+        }
+
+        /* Sort Controls */
+        .sort-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 4px 16px rgba(106, 90, 205, 0.1);
+        }
+        
+        .sort-label {
+            font-weight: 600;
+            color: #6a5acd;
+        }
+        
+        .sort-dropdown {
+            padding: 10px 20px;
+            border: 2px solid #e0e7ff;
+            border-radius: 25px;
+            background: #fff;
+            color: #6a5acd;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .sort-dropdown:hover {
+            border-color: #6a5acd;
+            box-shadow: 0 2px 8px rgba(106, 90, 205, 0.2);
+        }
+
+        /* Review Cards */
+        .reviews-grid {
+            display: grid;
+            gap: 30px;
+        }
+        
+        .review-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 18px;
+            padding: 30px;
+            box-shadow: 0 8px 32px rgba(106, 90, 205, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .review-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 48px rgba(106, 90, 205, 0.2);
+        }
+        
+        .review-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .reviewer-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #6a5acd 0%, #00eaff 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #fff;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .reviewer-info h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3em;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        
+        .reviewer-location {
+            color: #666;
+            font-size: 1em;
+        }
+        
+        .review-rating {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        
+        .stars {
+            color: #ffd700;
+            font-size: 1.2em;
+        }
+        
+        .review-date {
+            color: #999;
+            font-size: 0.9em;
+        }
+        
+        .review-text {
+            line-height: 1.6;
+            color: #555;
+            font-size: 1.1em;
+        }
+
+        /* Load More Button */
+        .load-more-container {
+            text-align: center;
+            margin: 40px 0;
+        }
+        
+        .load-more-btn {
+            display: inline-block;
+            padding: 15px 35px;
+            background: linear-gradient(45deg, #6a5acd, #00eaff);
+            color: #fff;
+            text-decoration: none;
+            border: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 16px rgba(106, 90, 205, 0.3);
+        }
+        
+        .load-more-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 32px rgba(106, 90, 205, 0.4);
+            background: linear-gradient(45deg, #5a4bb7, #00d4e6);
+        }
+        
+        .load-more-btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #6a5acd 0%, #00eaff 100%);
+            border-radius: 20px;
+            padding: 50px 40px;
+            text-align: center;
+            margin-top: 50px;
+            color: #fff;
+        }
+        
+        .cta-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .cta-section p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            padding: 15px 35px;
+            background: #fff;
+            color: #6a5acd;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Dark Mode */
+        body.dark-mode {
+            background: linear-gradient(135deg, #121212 0%, #232946 100%);
+            color: #e0e0e0;
+        }
+        
+        body.dark-mode .reviews-summary,
+        body.dark-mode .sort-controls,
+        body.dark-mode .review-card {
+            background: #1f1f2f;
+            color: #e0e0e0;
+        }
+        
+        body.dark-mode .reviewer-info h3 {
+            color: #e0e0e0;
+        }
+        
+        body.dark-mode .review-text {
+            color: #c0c0c0;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .page-title h1 {
+                font-size: 2.5em;
+            }
+            
+            .header-content {
+                padding: 0 15px;
+            }
+            
+            .container {
+                padding: 0 15px;
+            }
+            
+            .reviews-summary,
+            .review-card {
+                padding: 25px 20px;
+            }
+            
+            .sort-controls {
+                flex-direction: column;
+                gap: 15px;
+                align-items: stretch;
+            }
+            
+            .sort-dropdown {
+                text-align: center;
+            }
+            
+            .cta-section {
+                padding: 40px 20px;
+            }
+            
+            .cta-section h2 {
+                font-size: 2em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .page-title h1 {
+                font-size: 2em;
+            }
+            
+            .overall-rating {
+                font-size: 2.5em;
+            }
+            
+            .rating-stars {
+                font-size: 2em;
+            }
+            
+            .review-header {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .reviewer-avatar {
+                width: 50px;
+                height: 50px;
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="splash page update.html" class="back-button">
+                <i class="fa-solid fa-arrow-left"></i>
+                Back to Home
+            </a>
+            <div class="page-title">
+                <h1>Customer Reviews</h1>
+                <p>See what our clients are saying about Cleanerella</p>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Reviews Summary -->
+        <div class="reviews-summary">
+            <div class="overall-rating">4.8</div>
+            <div class="rating-stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star partial-star"></i>
+            </div>
+            <div class="rating-count">90+ ratings</div>
+            <div class="verified-badge">
+                <i class="fa-solid fa-certificate"></i>
+                <div>
+                    <strong>100% Verified Reviews</strong><br>
+                    <small>All reviews are from people who have redeemed discount vouchers with Homeaglow.</small>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sort Controls -->
+        <div class="sort-controls">
+            <span class="sort-label">Sort by:</span>
+            <select class="sort-dropdown">
+                <option value="newest">Newest First</option>
+                <option value="oldest">Oldest First</option>
+                <option value="highest">Highest Rating</option>
+                <option value="lowest">Lowest Rating</option>
+            </select>
+        </div>
+
+        <!-- Reviews Grid -->
+        <div class="reviews-grid">
+            <!-- Review 1 -->
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="reviewer-avatar">RW</div>
+                    <div class="reviewer-info">
+                        <h3>Raeann W.</h3>
+                        <div class="reviewer-location">Chesapeake, VA</div>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="review-date">3 days ago</span>
+                </div>
+                <div class="review-text">
+                    Best my home has ever looked! I've had professional cleaners clean my home before and have never had it look so spotless. My husband and I are thrilled with the level of detail.
+                </div>
+            </div>
+
+            <!-- Review 2 -->
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="reviewer-avatar">LD</div>
+                    <div class="reviewer-info">
+                        <h3>Lynne D.</h3>
+                        <div class="reviewer-location">Virginia Beach, VA</div>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="review-date">1 day ago</span>
+                </div>
+                <div class="review-text">
+                    Marlon comes in and gets right to work, no directions or guidance needed, other than special requests. Very pleased with his work performance.
+                </div>
+            </div>
+
+            <!-- Review 3 -->
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="reviewer-avatar">SM</div>
+                    <div class="reviewer-info">
+                        <h3>Sarah M.</h3>
+                        <div class="reviewer-location">Norfolk, VA</div>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="review-date">5 days ago</span>
+                </div>
+                <div class="review-text">
+                    Cleanerella exceeded all my expectations! Every corner of my home was spotless and they even cleaned areas I didn't think to ask for. Professional, reliable, and thorough - I couldn't be happier!
+                </div>
+            </div>
+
+            <!-- Review 4 -->
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="reviewer-avatar">JK</div>
+                    <div class="reviewer-info">
+                        <h3>Jennifer K.</h3>
+                        <div class="reviewer-location">Portsmouth, VA</div>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="review-date">1 week ago</span>
+                </div>
+                <div class="review-text">
+                    Amazing service! They transformed my house into a sparkling clean home. The attention to detail is incredible and the team is so professional. Will definitely be booking again!
+                </div>
+            </div>
+
+            <!-- Review 5 -->
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="reviewer-avatar">DT</div>
+                    <div class="reviewer-info">
+                        <h3>David T.</h3>
+                        <div class="reviewer-location">Hampton, VA</div>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="review-date">2 weeks ago</span>
+                </div>
+                <div class="review-text">
+                    Outstanding work! They cleaned our office space and it looks brand new. Very punctual, professional, and reasonably priced. Highly recommend Cleanerella for any cleaning needs.
+                </div>
+            </div>
+
+            <!-- Review 6 -->
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="reviewer-avatar">AL</div>
+                    <div class="reviewer-info">
+                        <h3>Amanda L.</h3>
+                        <div class="reviewer-location">Suffolk, VA</div>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="review-date">2 weeks ago</span>
+                </div>
+                <div class="review-text">
+                    Cleanerella did an incredible job with our move-out cleaning. They made sure every detail was perfect and our landlord was impressed. Thank you for making our move stress-free!
+                </div>
+            </div>
+
+            <!-- Review 7 -->
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="reviewer-avatar">MC</div>
+                    <div class="reviewer-info">
+                        <h3>Michael C.</h3>
+                        <div class="reviewer-location">Newport News, VA</div>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="review-date">3 weeks ago</span>
+                </div>
+                <div class="review-text">
+                    Excellent service from start to finish! The team was professional, thorough, and left my home immaculate. I've already scheduled them for regular monthly cleanings.
+                </div>
+            </div>
+
+            <!-- Review 8 -->
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="reviewer-avatar">KR</div>
+                    <div class="reviewer-info">
+                        <h3>Karen R.</h3>
+                        <div class="reviewer-location">Virginia Beach, VA</div>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="review-date">1 month ago</span>
+                </div>
+                <div class="review-text">
+                    Cleanerella cleaned our church and did an amazing job! They were respectful, thorough, and went above and beyond. Our congregation was so impressed with the results.
+                </div>
+            </div>
+
+            <!-- Hidden Reviews (Initially Hidden) -->
+            <!-- Review 9 -->
+            <div class="review-card hidden-review" style="display: none;">
+                <div class="review-header">
+                    <div class="reviewer-avatar">BH</div>
+                    <div class="reviewer-info">
+                        <h3>Barbara H.</h3>
+                        <div class="reviewer-location">Williamsburg, VA</div>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="review-date">1 month ago</span>
+                </div>
+                <div class="review-text">
+                    Fantastic deep cleaning service! They got into every corner and crevice. My kitchen has never sparkled like this. The team was professional and completed the job in the time promised.
+                </div>
+            </div>
+
+            <!-- Review 10 -->
+            <div class="review-card hidden-review" style="display: none;">
+                <div class="review-header">
+                    <div class="reviewer-avatar">TR</div>
+                    <div class="reviewer-info">
+                        <h3>Thomas R.</h3>
+                        <div class="reviewer-location">Chesapeake, VA</div>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="review-date">5 weeks ago</span>
+                </div>
+                <div class="review-text">
+                    Outstanding commercial cleaning for our office building. They work around our schedule and never miss a detail. Our employees love coming to work in such a clean environment.
+                </div>
+            </div>
+
+            <!-- Review 11 -->
+            <div class="review-card hidden-review" style="display: none;">
+                <div class="review-header">
+                    <div class="reviewer-avatar">ML</div>
+                    <div class="reviewer-info">
+                        <h3>Maria L.</h3>
+                        <div class="reviewer-location">Norfolk, VA</div>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="review-date">6 weeks ago</span>
+                </div>
+                <div class="review-text">
+                    They helped prepare our rental property for new tenants. The place looked brand new when they finished! Quick turnaround and excellent communication throughout the process.
+                </div>
+            </div>
+
+            <!-- Review 12 -->
+            <div class="review-card hidden-review" style="display: none;">
+                <div class="review-header">
+                    <div class="reviewer-avatar">JD</div>
+                    <div class="reviewer-info">
+                        <h3>James D.</h3>
+                        <div class="reviewer-location">Portsmouth, VA</div>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="review-date">2 months ago</span>
+                </div>
+                <div class="review-text">
+                    Cleanerella made my move-in so much easier! They had the entire house spotless before I arrived with my furniture. Saved me hours of work and stress.
+                </div>
+            </div>
+
+            <!-- Review 13 -->
+            <div class="review-card hidden-review" style="display: none;">
+                <div class="review-header">
+                    <div class="reviewer-avatar">CW</div>
+                    <div class="reviewer-info">
+                        <h3>Catherine W.</h3>
+                        <div class="reviewer-location">Virginia Beach, VA</div>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="review-date">2 months ago</span>
+                </div>
+                <div class="review-text">
+                    Absolutely thrilled with their event cleaning service! They cleaned up after our wedding reception perfectly. Everything was spotless by morning. Highly recommend for special events.
+                </div>
+            </div>
+
+            <!-- Review 14 -->
+            <div class="review-card hidden-review" style="display: none;">
+                <div class="review-header">
+                    <div class="reviewer-avatar">RS</div>
+                    <div class="reviewer-info">
+                        <h3>Robert S.</h3>
+                        <div class="reviewer-location">Hampton, VA</div>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="review-date">3 months ago</span>
+                </div>
+                <div class="review-text">
+                    Great recurring cleaning service! They come every two weeks and my house always looks perfect. The team is reliable, trustworthy, and does excellent work every time.
+                </div>
+            </div>
+
+            <!-- Review 15 -->
+            <div class="review-card hidden-review" style="display: none;">
+                <div class="review-header">
+                    <div class="reviewer-avatar">LB</div>
+                    <div class="reviewer-info">
+                        <h3>Lisa B.</h3>
+                        <div class="reviewer-location">York County, VA</div>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="review-date">3 months ago</span>
+                </div>
+                <div class="review-text">
+                    Post-construction cleanup was handled perfectly! After our kitchen renovation, Cleanerella removed all the dust and debris. They even cleaned inside our cabinets and appliances.
+                </div>
+            </div>
+
+            <!-- Review 16 -->
+            <div class="review-card hidden-review" style="display: none;">
+                <div class="review-header">
+                    <div class="reviewer-avatar">PJ</div>
+                    <div class="reviewer-info">
+                        <h3>Patricia J.</h3>
+                        <div class="reviewer-location">Poquoson, VA</div>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="review-date">4 months ago</span>
+                </div>
+                <div class="review-text">
+                    Emergency cleaning service when my mother-in-law surprised us with a visit! They came within 2 hours and made my home look like a magazine. Life savers!
+                </div>
+            </div>
+
+            <!-- Review 17 -->
+            <div class="review-card hidden-review" style="display: none;">
+                <div class="review-header">
+                    <div class="reviewer-avatar">GM</div>
+                    <div class="reviewer-info">
+                        <h3>George M.</h3>
+                        <div class="reviewer-location">Franklin, VA</div>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="review-date">4 months ago</span>
+                </div>
+                <div class="review-text">
+                    Outstanding window cleaning service! They cleaned all our windows inside and out, including the hard-to-reach second story. Crystal clear results and very professional team.
+                </div>
+            </div>
+
+            <!-- Review 18 -->
+            <div class="review-card hidden-review" style="display: none;">
+                <div class="review-header">
+                    <div class="reviewer-avatar">EH</div>
+                    <div class="reviewer-info">
+                        <h3>Elizabeth H.</h3>
+                        <div class="reviewer-location">Virginia Beach, VA</div>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="review-date">5 months ago</span>
+                </div>
+                <div class="review-text">
+                    Cleanerella helped us prepare for hosting Thanksgiving dinner. They deep cleaned everything including the guest bathrooms and dining room. Our family was so impressed!
+                </div>
+            </div>
+
+            <!-- Review 19 -->
+            <div class="review-card hidden-review" style="display: none;">
+                <div class="review-header">
+                    <div class="reviewer-avatar">NT</div>
+                    <div class="reviewer-info">
+                        <h3>Nancy T.</h3>
+                        <div class="reviewer-location">Smithfield, VA</div>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="review-date">5 months ago</span>
+                </div>
+                <div class="review-text">
+                    Excellent carpet cleaning service! They removed years of pet stains and odors that I thought were permanent. My carpets look and smell brand new again.
+                </div>
+            </div>
+
+            <!-- Review 20 -->
+            <div class="review-card hidden-review" style="display: none;">
+                <div class="review-header">
+                    <div class="reviewer-avatar">WK</div>
+                    <div class="reviewer-info">
+                        <h3>William K.</h3>
+                        <div class="reviewer-location">Newport News, VA</div>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="review-date">6 months ago</span>
+                </div>
+                <div class="review-text">
+                    Their garage and basement cleaning service is amazing! Cleaned out years of accumulated clutter and made these spaces usable again. Very thorough and organized approach.
+                </div>
+            </div>
+
+            <!-- Review 21 -->
+            <div class="review-card hidden-review" style="display: none;">
+                <div class="review-header">
+                    <div class="reviewer-avatar">VD</div>
+                    <div class="reviewer-info">
+                        <h3>Victoria D.</h3>
+                        <div class="reviewer-location">Chesapeake, VA</div>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="review-date">6 months ago</span>
+                </div>
+                <div class="review-text">
+                    Best upholstery cleaning I've ever experienced! They restored my antique furniture to its original beauty. The team was careful and knowledgeable about different fabric types.
+                </div>
+            </div>
+
+            <!-- Review 22 -->
+            <div class="review-card hidden-review" style="display: none;">
+                <div class="review-header">
+                    <div class="reviewer-avatar">HG</div>
+                    <div class="reviewer-info">
+                        <h3>Helen G.</h3>
+                        <div class="reviewer-location">Suffolk, VA</div>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="review-date">7 months ago</span>
+                </div>
+                <div class="review-text">
+                    Cleanerella helped us organize and clean our storage unit before a big move. They sorted everything efficiently and cleaned the entire space. Made our move so much easier!
+                </div>
+            </div>
+
+            <!-- Review 23 -->
+            <div class="review-card hidden-review" style="display: none;">
+                <div class="review-header">
+                    <div class="reviewer-avatar">AS</div>
+                    <div class="reviewer-info">
+                        <h3>Anthony S.</h3>
+                        <div class="reviewer-location">Hampton, VA</div>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="review-date">7 months ago</span>
+                </div>
+                <div class="review-text">
+                    Professional medical office cleaning. They understand the importance of sanitation in healthcare settings. Always thorough and follow all protocols perfectly.
+                </div>
+            </div>
+
+            <!-- Review 24 -->
+            <div class="review-card hidden-review" style="display: none;">
+                <div class="review-header">
+                    <div class="reviewer-avatar">DS</div>
+                    <div class="reviewer-info">
+                        <h3>Dorothy S.</h3>
+                        <div class="reviewer-location">Portsmouth, VA</div>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="review-date">8 months ago</span>
+                </div>
+                <div class="review-text">
+                    Senior-friendly cleaning service! They're patient and gentle, understanding my mobility limitations. They clean everything I can't reach anymore. Such caring professionals.
+                </div>
+            </div>
+
+            <!-- Review 25 -->
+            <div class="review-card hidden-review" style="display: none;">
+                <div class="review-header">
+                    <div class="reviewer-avatar">BR</div>
+                    <div class="reviewer-info">
+                        <h3>Brian R.</h3>
+                        <div class="reviewer-location">Norfolk, VA</div>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="review-date">8 months ago</span>
+                </div>
+                <div class="review-text">
+                    Excellent restaurant kitchen deep cleaning! They helped us pass our health inspection with flying colors. Very knowledgeable about commercial food service requirements.
+                </div>
+            </div>
+
+            <!-- Review 26 -->
+            <div class="review-card hidden-review" style="display: none;">
+                <div class="review-header">
+                    <div class="reviewer-avatar">JR</div>
+                    <div class="reviewer-info">
+                        <h3>Jennifer R.</h3>
+                        <div class="reviewer-location">Virginia Beach, VA</div>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="review-date">9 months ago</span>
+                </div>
+                <div class="review-text">
+                    Fantastic pool house and patio cleaning! They cleaned all the outdoor furniture, pressure washed the deck, and made everything ready for summer entertaining.
+                </div>
+            </div>
+
+            <!-- Review 27 -->
+            <div class="review-card hidden-review" style="display: none;">
+                <div class="review-header">
+                    <div class="reviewer-avatar">KM</div>
+                    <div class="reviewer-info">
+                        <h3>Kevin M.</h3>
+                        <div class="reviewer-location">Williamsburg, VA</div>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="review-date">9 months ago</span>
+                </div>
+                <div class="review-text">
+                    Holiday decorating cleanup service was a lifesaver! After Christmas, they packed away all decorations carefully and cleaned every room. House was back to normal in no time!
+                </div>
+            </div>
+
+            <!-- Review 28 -->
+            <div class="review-card hidden-review" style="display: none;">
+                <div class="review-header">
+                    <div class="reviewer-avatar">MP</div>
+                    <div class="reviewer-info">
+                        <h3>Mary P.</h3>
+                        <div class="reviewer-location">Chesapeake, VA</div>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="review-date">10 months ago</span>
+                </div>
+                <div class="review-text">
+                    Excellent attic and crawl space cleaning! They removed old insulation safely and cleaned areas I never thought could be cleaned. Very professional and well-equipped team.
+                </div>
+            </div>
+
+            <!-- Review 29 -->
+            <div class="review-card hidden-review" style="display: none;">
+                <div class="review-header">
+                    <div class="reviewer-avatar">CT</div>
+                    <div class="reviewer-info">
+                        <h3>Charles T.</h3>
+                        <div class="reviewer-location">Suffolk, VA</div>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="review-date">10 months ago</span>
+                </div>
+                <div class="review-text">
+                    Outstanding boat cleaning service! They detailed my yacht inside and out, including all the hard-to-reach areas. Boat looks better than when I first bought it!
+                </div>
+            </div>
+
+            <!-- Review 30 -->
+            <div class="review-card hidden-review" style="display: none;">
+                <div class="review-header">
+                    <div class="reviewer-avatar">SF</div>
+                    <div class="reviewer-info">
+                        <h3>Sandra F.</h3>
+                        <div class="reviewer-location">Hampton, VA</div>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="review-date">11 months ago</span>
+                </div>
+                <div class="review-text">
+                    Perfect daycare cleaning service! They sanitize everything properly and are great with working around our schedule. The children's safety is clearly their priority.
+                </div>
+            </div>
+
+            <!-- Review 31 -->
+            <div class="review-card hidden-review" style="display: none;">
+                <div class="review-header">
+                    <div class="reviewer-avatar">RN</div>
+                    <div class="reviewer-info">
+                        <h3>Richard N.</h3>
+                        <div class="reviewer-location">Newport News, VA</div>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="review-date">11 months ago</span>
+                </div>
+                <div class="review-text">
+                    Amazing fire damage cleanup service. After our kitchen fire, they cleaned smoke residue from every surface and eliminated all odors. Made our home livable again.
+                </div>
+            </div>
+
+            <!-- Review 32 -->
+            <div class="review-card hidden-review" style="display: none;">
+                <div class="review-header">
+                    <div class="reviewer-avatar">FC</div>
+                    <div class="reviewer-info">
+                        <h3>Frank C.</h3>
+                        <div class="reviewer-location">Portsmouth, VA</div>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="review-date">1 year ago</span>
+                </div>
+                <div class="review-text">
+                    Excellent gym and fitness center cleaning! They sanitize all equipment thoroughly and maintain high cleanliness standards. Our members always comment on how clean everything is.
+                </div>
+            </div>
+
+            <!-- Review 33 -->
+            <div class="review-card hidden-review" style="display: none;">
+                <div class="review-header">
+                    <div class="reviewer-avatar">BW</div>
+                    <div class="reviewer-info">
+                        <h3>Betty W.</h3>
+                        <div class="reviewer-location">Virginia Beach, VA</div>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="review-date">1 year ago</span>
+                </div>
+                <div class="review-text">
+                    Wonderful estate sale cleanup! They helped organize and clean the entire house after we sold most of the contents. Made the selling process so much smoother.
+                </div>
+            </div>
+
+            <!-- Review 34 -->
+            <div class="review-card hidden-review" style="display: none;">
+                <div class="review-header">
+                    <div class="reviewer-avatar">DL</div>
+                    <div class="reviewer-info">
+                        <h3>Daniel L.</h3>
+                        <div class="reviewer-location">Norfolk, VA</div>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="review-date">1 year ago</span>
+                </div>
+                <div class="review-text">
+                    Outstanding veterinary clinic cleaning! They understand the unique requirements of animal care facilities. Always thorough with disinfection and odor control.
+                </div>
+            </div>
+
+            <!-- Review 35 -->
+            <div class="review-card hidden-review" style="display: none;">
+                <div class="review-header">
+                    <div class="reviewer-avatar">JM</div>
+                    <div class="reviewer-info">
+                        <h3>Jessica M.</h3>
+                        <div class="reviewer-location">Chesapeake, VA</div>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="review-date">1 year ago</span>
+                </div>
+                <div class="review-text">
+                    Cleanerella saved my open house! Last minute emergency when my regular cleaner canceled. They arrived within 3 hours and made my home absolutely pristine. Sold the house that weekend!
+                </div>
+            </div>
+
+            <!-- Review 36 -->
+            <div class="review-card hidden-review" style="display: none;">
+                <div class="review-header">
+                    <div class="reviewer-avatar">AG</div>
+                    <div class="reviewer-info">
+                        <h3>Andrew G.</h3>
+                        <div class="reviewer-location">Virginia Beach, VA</div>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="review-date">13 months ago</span>
+                </div>
+                <div class="review-text">
+                    Outstanding RV and camper cleaning service! They detailed our motorhome inside and out before our cross-country trip. Every surface sparkled and all storage areas were organized.
+                </div>
+            </div>
+
+            <!-- Review 37 -->
+            <div class="review-card hidden-review" style="display: none;">
+                <div class="review-header">
+                    <div class="reviewer-avatar">MT</div>
+                    <div class="reviewer-info">
+                        <h3>Michelle T.</h3>
+                        <div class="reviewer-location">Hampton, VA</div>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="review-date">13 months ago</span>
+                </div>
+                <div class="review-text">
+                    Excellent library and bookstore cleaning! They dusted every book and shelf with incredible care. The reading areas are spotless and the air quality improved dramatically.
+                </div>
+            </div>
+
+            <!-- Review 38 -->
+            <div class="review-card hidden-review" style="display: none;">
+                <div class="review-header">
+                    <div class="reviewer-avatar">PN</div>
+                    <div class="reviewer-info">
+                        <h3>Paul N.</h3>
+                        <div class="reviewer-location">Suffolk, VA</div>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="review-date">14 months ago</span>
+                </div>
+                <div class="review-text">
+                    Amazing art studio cleanup! They carefully cleaned around valuable paintings and sculptures. Understood the importance of dust-free environment for artwork preservation.
+                </div>
+            </div>
+
+            <!-- Review 39 -->
+            <div class="review-card hidden-review" style="display: none;">
+                <div class="review-header">
+                    <div class="reviewer-avatar">LK</div>
+                    <div class="reviewer-info">
+                        <h3>Linda K.</h3>
+                        <div class="reviewer-location">Newport News, VA</div>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="review-date">14 months ago</span>
+                </div>
+                <div class="review-text">
+                    Perfect nursery and childcare facility cleaning! They use safe, non-toxic products and are wonderful with the children. The play areas are always sanitized and spotless.
+                </div>
+            </div>
+
+            <!-- Review 40 -->
+            <div class="review-card hidden-review" style="display: none;">
+                <div class="review-header">
+                    <div class="reviewer-avatar">TH</div>
+                    <div class="reviewer-info">
+                        <h3>Timothy H.</h3>
+                        <div class="reviewer-location">Portsmouth, VA</div>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="review-date">15 months ago</span>
+                </div>
+                <div class="review-text">
+                    Exceptional auto dealership cleaning! They detailed our showroom and service areas perfectly. Cars look showroom-ready and the customer areas are immaculate. Professional service!
+                </div>
+            </div>
+
+            <!-- Review 41 -->
+            <div class="review-card hidden-review" style="display: none;">
+                <div class="review-header">
+                    <div class="reviewer-avatar">CM</div>
+                    <div class="reviewer-info">
+                        <h3>Christine M.</h3>
+                        <div class="reviewer-location">Norfolk, VA</div>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="review-date">15 months ago</span>
+                </div>
+                <div class="review-text">
+                    Outstanding water damage restoration cleanup! After our basement flood, they dried, sanitized, and restored everything. No mold, no odors - just a clean, fresh basement again.
+                </div>
+            </div>
+
+            <!-- Review 42 -->
+            <div class="review-card hidden-review" style="display: none;">
+                <div class="review-header">
+                    <div class="reviewer-avatar">GS</div>
+                    <div class="reviewer-info">
+                        <h3>Gregory S.</h3>
+                        <div class="reviewer-location">Chesapeake, VA</div>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="review-date">16 months ago</span>
+                </div>
+                <div class="review-text">
+                    Excellent manufacturing facility cleaning! They understand industrial cleaning requirements and safety protocols. Our facility passed inspection with flying colors. Highly professional team.
+                </div>
+            </div>
+
+            <!-- Review 43 -->
+            <div class="review-card hidden-review" style="display: none;">
+                <div class="review-header">
+                    <div class="reviewer-avatar">RT</div>
+                    <div class="reviewer-info">
+                        <h3>Rachel T.</h3>
+                        <div class="reviewer-location">Virginia Beach, VA</div>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="review-date">16 months ago</span>
+                </div>
+                <div class="review-text">
+                    Amazing pet grooming salon cleaning! They removed all hair, sanitized equipment, and eliminated odors completely. The salon smells fresh and looks pristine for our furry clients.
+                </div>
+            </div>
+
+            <!-- Review 44 -->
+            <div class="review-card hidden-review" style="display: none;">
+                <div class="review-header">
+                    <div class="reviewer-avatar">WL</div>
+                    <div class="reviewer-info">
+                        <h3>Walter L.</h3>
+                        <div class="reviewer-location">Hampton, VA</div>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="review-date">17 months ago</span>
+                </div>
+                <div class="review-text">
+                    Perfect retirement community cleaning! They're gentle with residents and respectful of personal belongings. Common areas always sparkle and individual rooms are cleaned with care.
+                </div>
+            </div>
+
+            <!-- Review 45 -->
+            <div class="review-card hidden-review" style="display: none;">
+                <div class="review-header">
+                    <div class="reviewer-avatar">IS</div>
+                    <div class="reviewer-info">
+                        <h3>Isabella S.</h3>
+                        <div class="reviewer-location">Suffolk, VA</div>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="review-date">17 months ago</span>
+                </div>
+                <div class="review-text">
+                    Excellent food truck deep cleaning! They sanitized every surface and cleaned the exhaust system thoroughly. Passed our health department inspection with perfect scores. Highly recommend!
+                </div>
+            </div>
+
+            <!-- Review 46 -->
+            <div class="review-card hidden-review" style="display: none;">
+                <div class="review-header">
+                    <div class="reviewer-avatar">KH</div>
+                    <div class="reviewer-info">
+                        <h3>Kenneth H.</h3>
+                        <div class="reviewer-location">Newport News, VA</div>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="review-date">18 months ago</span>
+                </div>
+                <div class="review-text">
+                    Outstanding beach house rental cleaning! They cleaned sand from every corner and made the property guest-ready in record time. Guests always comment on how spotless everything is.
+                </div>
+            </div>
+
+            <!-- Review 47 -->
+            <div class="review-card hidden-review" style="display: none;">
+                <div class="review-header">
+                    <div class="reviewer-avatar">OB</div>
+                    <div class="reviewer-info">
+                        <h3>Olivia B.</h3>
+                        <div class="reviewer-location">Portsmouth, VA</div>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="review-date">18 months ago</span>
+                </div>
+                <div class="review-text">
+                    Amazing dance studio cleaning! They cleaned the mirrors to perfection and properly maintained the dance floors. The studio is always sparkling for our performances and classes.
+                </div>
+            </div>
+
+            <!-- Review 48 -->
+            <div class="review-card hidden-review" style="display: none;">
+                <div class="review-header">
+                    <div class="reviewer-avatar">EJ</div>
+                    <div class="reviewer-info">
+                        <h3>Edward J.</h3>
+                        <div class="reviewer-location">Norfolk, VA</div>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="review-date">19 months ago</span>
+                </div>
+                <div class="review-text">
+                    Excellent tattoo parlor sanitization! They understand the strict hygiene requirements and use hospital-grade disinfectants. Our shop always passes health inspections flawlessly.
+                </div>
+            </div>
+
+            <!-- Review 49 -->
+            <div class="review-card hidden-review" style="display: none;">
+                <div class="review-header">
+                    <div class="reviewer-avatar">SW</div>
+                    <div class="reviewer-info">
+                        <h3>Stephanie W.</h3>
+                        <div class="reviewer-location">Chesapeake, VA</div>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="review-date">19 months ago</span>
+                </div>
+                <div class="review-text">
+                    Perfect wedding venue cleanup! They transformed our venue from post-reception chaos to pristine condition overnight. The coordination and efficiency were absolutely incredible.
+                </div>
+            </div>
+
+            <!-- Review 50 -->
+            <div class="review-card hidden-review" style="display: none;">
+                <div class="review-header">
+                    <div class="reviewer-avatar">HT</div>
+                    <div class="reviewer-info">
+                        <h3>Harold T.</h3>
+                        <div class="reviewer-location">Virginia Beach, VA</div>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="review-date">20 months ago</span>
+                </div>
+                <div class="review-text">
+                    Outstanding warehouse and storage facility cleaning! They organized and cleaned our entire inventory storage area. Everything is labeled, dust-free, and easily accessible now.
+                </div>
+            </div>
+
+            <!-- Review 51 -->
+            <div class="review-card hidden-review" style="display: none;">
+                <div class="review-header">
+                    <div class="reviewer-avatar">GL</div>
+                    <div class="reviewer-info">
+                        <h3>Grace L.</h3>
+                        <div class="reviewer-location">Hampton, VA</div>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="review-date">20 months ago</span>
+                </div>
+                <div class="review-text">
+                    Exceptional yoga studio cleaning! They maintain the peaceful, clean environment essential for practice. Mats are sanitized, mirrors spotless, and the air always feels fresh and pure.
+                </div>
+            </div>
+
+            <!-- Review 52 -->
+            <div class="review-card hidden-review" style="display: none;">
+                <div class="review-header">
+                    <div class="reviewer-avatar">CD</div>
+                    <div class="reviewer-info">
+                        <h3>Christopher D.</h3>
+                        <div class="reviewer-location">Suffolk, VA</div>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="review-date">21 months ago</span>
+                </div>
+                <div class="review-text">
+                    Amazing funeral home cleaning service! They handle this sensitive work with utmost respect and professionalism. Every detail is perfect, providing comfort during difficult times.
+                </div>
+            </div>
+
+            <!-- Review 53 -->
+            <div class="review-card hidden-review" style="display: none;">
+                <div class="review-header">
+                    <div class="reviewer-avatar">NR</div>
+                    <div class="reviewer-info">
+                        <h3>Nicole R.</h3>
+                        <div class="reviewer-location">Newport News, VA</div>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="review-date">21 months ago</span>
+                </div>
+                <div class="review-text">
+                    Perfect salon and spa cleaning! They sanitize every surface and maintain the luxurious, relaxing atmosphere our clients expect. The treatment rooms are always immaculate.
+                </div>
+            </div>
+
+            <!-- Review 54 -->
+            <div class="review-card hidden-review" style="display: none;">
+                <div class="review-header">
+                    <div class="reviewer-avatar">JS</div>
+                    <div class="reviewer-info">
+                        <h3>Jonathan S.</h3>
+                        <div class="reviewer-location">Portsmouth, VA</div>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="review-date">22 months ago</span>
+                </div>
+                <div class="review-text">
+                    Excellent computer repair shop cleaning! They carefully cleaned around sensitive electronics and organized all the components. Dust-free environment improved our repair success rate.
+                </div>
+            </div>
+
+            <!-- Review 55 -->
+            <div class="review-card hidden-review" style="display: none;">
+                <div class="review-header">
+                    <div class="reviewer-avatar">MH</div>
+                    <div class="reviewer-info">
+                        <h3>Margaret H.</h3>
+                        <div class="reviewer-location">Norfolk, VA</div>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="review-date">22 months ago</span>
+                </div>
+                <div class="review-text">
+                    Outstanding assisted living facility cleaning! They're patient and kind with residents, maintaining dignity while ensuring cleanliness. Families always comment on how nice everything looks.
+                </div>
+            </div>
+
+            <!-- Review 56 -->
+            <div class="review-card hidden-review" style="display: none;">
+                <div class="review-header">
+                    <div class="reviewer-avatar">PK</div>
+                    <div class="reviewer-info">
+                        <h3>Peter K.</h3>
+                        <div class="reviewer-location">Chesapeake, VA</div>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="review-date">23 months ago</span>
+                </div>
+                <div class="review-text">
+                    Amazing brewery cleaning service! They understand food safety requirements and cleaned all our brewing equipment to perfection. Our next batch will be the cleanest yet!
+                </div>
+            </div>
+
+            <!-- Review 57 -->
+            <div class="review-card hidden-review" style="display: none;">
+                <div class="review-header">
+                    <div class="reviewer-avatar">RG</div>
+                    <div class="reviewer-info">
+                        <h3>Rebecca G.</h3>
+                        <div class="reviewer-location">Virginia Beach, VA</div>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i
+                    </div>
+                    <span class="review-date">2 years ago</span>
+                </div>
+                <div class="review-text">
+                    Excellent community center cleaning! They clean our multi-purpose facility including gym, kitchen, and meeting rooms. Always ready for the next event or activity. Reliable service!
+                </div>
+            </div>
+
+            <!-- Review 58 -->
+            <div class="review-card hidden-review" style="display: none;">
+                <div class="review-header">
+                    <div class="reviewer-avatar">KS</div>
+                    <div class="reviewer-info">
+                        <h3>Karen S.</h3>
+                        <div class="reviewer-location">Portsmouth, VA</div>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="review-date">2 years ago</span>
+                </div>
+                <div class="review-text">
+                    Amazing specialty equipment cleaning! They cleaned our scientific laboratory equipment with precision and care. Every instrument was spotless and ready for research. Exceptional attention to detail!
+                </div>
+            </div>
+
+            <!-- Review 59 -->
+            <div class="review-card hidden-review" style="display: none;">
+                <div class="review-header">
+                    <div class="reviewer-avatar">BM</div>
+                    <div class="reviewer-info">
+                        <h3>Benjamin M.</h3>
+                        <div class="reviewer-location">Norfolk, VA</div>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="review-date">2 years ago</span>
+                </div>
+                <div class="review-text">
+                    Outstanding music venue cleaning! They cleaned our concert hall including stage, seating, and sound equipment areas. Everything was spotless for our grand reopening event. Professional team!
+                </div>
+            </div>
+
+            <!-- Review 60 -->
+            <div class="review-card hidden-review" style="display: none;">
+                <div class="review-header">
+                    <div class="reviewer-avatar">SS</div>
+                    <div class="reviewer-info">
+                        <h3>Susan S.</h3>
+                        <div class="reviewer-location">Virginia Beach, VA</div>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="review-date">2 years ago</span>
+                </div>
+                <div class="review-text">
+                    Incredible craft brewery cleaning! They deep clean our brewing equipment and tasting room to the highest standards. Health inspectors are always impressed. Essential for our operation!
+                </div>
+            </div>
+
+            <!-- Review 61 -->
+            <div class="review-card hidden-review" style="display: none;">
+                <div class="review-header">
+                    <div class="reviewer-avatar">RG</div>
+                    <div class="reviewer-info">
+                        <h3>Robert G.</h3>
+                        <div class="reviewer-location">Chesapeake, VA</div>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="review-date">2 years ago</span>
+                </div>
+                <div class="review-text">
+                    Fantastic senior center cleaning! They're respectful and gentle with our elderly visitors while maintaining the highest cleanliness standards. Creates a safe, welcoming environment for all.
+                </div>
+            </div>
+
+            <!-- Review 62 -->
+            <div class="review-card hidden-review" style="display: none;">
+                <div class="review-header">
+                    <div class="reviewer-avatar">IP</div>
+                    <div class="reviewer-info">
+                        <h3>Isabella P.</h3>
+                        <div class="reviewer-location">Suffolk, VA</div>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="review-date">2 years ago</span>
+                </div>
+                <div class="review-text">
+                    Excellent tattoo parlor cleaning! They sanitize all surfaces and equipment to health department standards. Artists and clients feel confident in the sterile, professional environment.
+                </div>
+            </div>
+
+            <!-- Review 63 -->
+            <div class="review-card hidden-review" style="display: none;">
+                <div class="review-header">
+                    <div class="reviewer-avatar">MR</div>
+                    <div class="reviewer-info">
+                        <h3>Matthew R.</h3>
+                        <div class="reviewer-location">Hampton, VA</div>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="review-date">2 years ago</span>
+                </div>
+                <div class="review-text">
+                    Amazing coworking space cleaning! They clean individual offices, common areas, and shared kitchen facilities perfectly. Remote workers love the clean, professional atmosphere.
+                </div>
+            </div>
+
+            <!-- Review 64 -->
+            <div class="review-card hidden-review" style="display: none;">
+                <div class="review-header">
+                    <div class="reviewer-avatar">JT</div>
+                    <div class="reviewer-info">
+                        <h3>Joan T.</h3>
+                        <div class="reviewer-location">Newport News, VA</div>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="review-date">2 years ago</span>
+                </div>
+                <div class="review-text">
+                    Outstanding emergency cleanup service! When our basement flooded, they cleaned and sanitized everything quickly and thoroughly. Prevented mold and made our home safe again. Lifesavers!
+                </div>
+            </div>
+
+            <!-- Review 65 -->
+            <div class="review-card hidden-review" style="display: none;">
+                <div class="review-header">
+                    <div class="reviewer-avatar">JM</div>
+                    <div class="reviewer-info">
+                        <h3>Jessica M.</h3>
+                        <div class="reviewer-location">Chesapeake, VA</div>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="review-date">1 year ago</span>
+                </div>
+                <div class="review-text">
+                    Cleanerella saved my open house! Last minute emergency when my regular cleaner canceled. They arrived within 3 hours and made my home absolutely pristine. Sold the house that weekend!
+                </div>
+            </div>
+
+            <!-- Review 66 -->
+            <div class="review-card hidden-review" style="display: none;">
+                <div class="review-header">
+                    <div class="reviewer-avatar">AG</div>
+                    <div class="reviewer-info">
+                        <h3>Andrew G.</h3>
+                        <div class="reviewer-location">Virginia Beach, VA</div>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="review-date">13 months ago</span>
+                </div>
+                <div class="review-text">
+                    Outstanding RV and camper cleaning service! They detailed our motorhome inside and out before our cross-country trip. Every surface sparkled and all storage areas were organized.
+                </div>
+            </div>
+
+            <!-- Review 67 -->
+            <div class="review-card hidden-review" style="display: none;">
+                <div class="review-header">
+                    <div class="reviewer-avatar">MT</div>
+                    <div class="reviewer-info">
+                        <h3>Michelle T.</h3>
+                        <div class="reviewer-location">Hampton, VA</div>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="review-date">13 months ago</span>
+                </div>
+                <div class="review-text">
+                    Excellent library and bookstore cleaning! They dusted every book and shelf with incredible care. The reading areas are spotless and the air quality improved dramatically.
+                </div>
+            </div>
+
+            <!-- Review 68 -->
+            <div class="review-card hidden-review" style="display: none;">
+                <div class="review-header">
+                    <div class="reviewer-avatar">PN</div>
+                    <div class="reviewer-info">
+                        <h3>Paul N.</h3>
+                        <div class="reviewer-location">Suffolk, VA</div>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="review-date">14 months ago</span>
+                </div>
+                <div class="review-text">
+                    Amazing art studio cleanup! They carefully cleaned around valuable paintings and sculptures. Understood the importance of dust-free environment for artwork preservation.
+                </div>
+            </div>
+
+            <!-- Review 69 -->
+            <div class="review-card hidden-review" style="display: none;">
+                <div class="review-header">
+                    <div class="reviewer-avatar">LK</div>
+                    <div class="reviewer-info">
+                        <h3>Linda K.</h3>
+                        <div class="reviewer-location">Newport News, VA</div>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="review-date">14 months ago</span>
+                </div>
+                <div class="review-text">
+                    Perfect nursery and childcare facility cleaning! They use safe, non-toxic products and are wonderful with the children. The play areas are always sanitized and spotless.
+                </div>
+            </div>
+
+            <!-- Review 70 -->
+            <div class="review-card hidden-review" style="display: none;">
+                <div class="review-header">
+                    <div class="reviewer-avatar">TH</div>
+                    <div class="reviewer-info">
+                        <h3>Timothy H.</h3>
+                        <div class="reviewer-location">Portsmouth, VA</div>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="review-date">15 months ago</span>
+                </div>
+                <div class="review-text">
+                    Exceptional auto dealership cleaning! They detailed our showroom and service areas perfectly. Cars look showroom-ready and the customer areas are immaculate. Professional service!
+                </div>
+            </div>
+
+            <!-- Review 71 -->
+            <div class="review-card hidden-review" style="display: none;">
+                <div class="review-header">
+                    <div class="reviewer-avatar">CM</div>
+                    <div class="reviewer-info">
+                        <h3>Christine M.</h3>
+                        <div class="reviewer-location">Norfolk, VA</div>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="review-date">15 months ago</span>
+                </div>
+                <div class="review-text">
+                    Outstanding water damage restoration cleanup! After our basement flood, they dried, sanitized, and restored everything. No mold, no odors - just a clean, fresh basement again.
+                </div>
+            </div>
+
+            <!-- Review 72 -->
+            <div class="review-card hidden-review" style="display: none;">
+                <div class="review-header">
+                    <div class="reviewer-avatar">GS</div>
+                    <div class="reviewer-info">
+                        <h3>Gregory S.</h3>
+                        <div class="reviewer-location">Chesapeake, VA</div>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="review-date">16 months ago</span>
+                </div>
+                <div class="review-text">
+                    Excellent manufacturing facility cleaning! They understand industrial cleaning requirements and safety protocols. Our facility passed inspection with flying colors. Highly professional team.
+                </div>
+            </div>
+
+            <!-- Review 73 -->
+            <div class="review-card hidden-review" style="display: none;">
+                <div class="review-header">
+                    <div class="reviewer-avatar">RT</div>
+                    <div class="reviewer-info">
+                        <h3>Rachel T.</h3>
+                        <div class="reviewer-location">Virginia Beach, VA</div>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="review-date">16 months ago</span>
+                </div>
+                <div class="review-text">
+                    Amazing pet grooming salon cleaning! They removed all hair, sanitized equipment, and eliminated odors completely. The salon smells fresh and looks pristine for our furry clients.
+                </div>
+            </div>
+
+            <!-- Review 74 -->
+            <div class="review-card hidden-review" style="display: none;">
+                <div class="review-header">
+                    <div class="reviewer-avatar">WL</div>
+                    <div class="reviewer-info">
+                        <h3>Walter L.</h3>
+                        <div class="reviewer-location">Hampton, VA</div>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="review-date">17 months ago</span>
+                </div>
+                <div class="review-text">
+                    Perfect retirement community cleaning! They're gentle with residents and respectful of personal belongings. Common areas always sparkle and individual rooms are cleaned with care.
+                </div>
+            </div>
+
+            <!-- Review 75 -->
+            <div class="review-card hidden-review" style="display: none;">
+                <div class="review-header">
+                    <div class="reviewer-avatar">IS</div>
+                    <div class="reviewer-info">
+                        <h3>Isabella S.</h3>
+                        <div class="reviewer-location">Suffolk, VA</div>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="review-date">17 months ago</span>
+                </div>
+                <div class="review-text">
+                    Excellent food truck deep cleaning! They sanitized every surface and cleaned the exhaust system thoroughly. Passed our health department inspection with perfect scores. Highly recommend!
+                </div>
+            </div>
+
+            <!-- Review 76 -->
+            <div class="review-card hidden-review" style="display: none;">
+                <div class="review-header">
+                    <div class="reviewer-avatar">KH</div>
+                    <div class="reviewer-info">
+                        <h3>Kenneth H.</h3>
+                        <div class="reviewer-location">Newport News, VA</div>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="review-date">18 months ago</span>
+                </div>
+                <div class="review-text">
+                    Outstanding beach house rental cleaning! They cleaned sand from every corner and made the property guest-ready in record time. Guests always comment on how spotless everything is.
+                </div>
+            </div>
+
+            <!-- Review 77 -->
+            <div class="review-card hidden-review" style="display: none;">
+                <div class="review-header">
+                    <div class="reviewer-avatar">OB</div>
+                    <div class="reviewer-info">
+                        <h3>Olivia B.</h3>
+                        <div class="reviewer-location">Portsmouth, VA</div>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="review-date">18 months ago</span>
+                </div>
+                <div class="review-text">
+                    Amazing dance studio cleaning! They cleaned the mirrors to perfection and properly maintained the dance floors. The studio is always sparkling for our performances and classes.
+                </div>
+            </div>
+
+            <!-- Review 78 -->
+            <div class="review-card hidden-review" style="display: none;">
+                <div class="review-header">
+                    <div class="reviewer-avatar">EJ</div>
+                    <div class="reviewer-info">
+                        <h3>Edward J.</h3>
+                        <div class="reviewer-location">Norfolk, VA</div>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="review-date">19 months ago</span>
+                </div>
+                <div class="review-text">
+                    Excellent tattoo parlor sanitization! They understand the strict hygiene requirements and use hospital-grade disinfectants. Our shop always passes health inspections flawlessly.
+                </div>
+            </div>
+
+            <!-- Review 79 -->
+            <div class="review-card hidden-review" style="display: none;">
+                <div class="review-header">
+                    <div class="reviewer-avatar">SW</div>
+                    <div class="reviewer-info">
+                        <h3>Stephanie W.</h3>
+                        <div class="reviewer-location">Chesapeake, VA</div>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="review-date">19 months ago</span>
+                </div>
+                <div class="review-text">
+                    Perfect wedding venue cleanup! They transformed our venue from post-reception chaos to pristine condition overnight. The coordination and efficiency were absolutely incredible.
+                </div>
+            </div>
+
+            <!-- Review 80 -->
+            <div class="review-card hidden-review" style="display: none;">
+                <div class="review-header">
+                    <div class="reviewer-avatar">HT</div>
+                    <div class="reviewer-info">
+                        <h3>Harold T.</h3>
+                        <div class="reviewer-location">Virginia Beach, VA</div>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="review-date">20 months ago</span>
+                </div>
+                <div class="review-text">
+                    Outstanding warehouse and storage facility cleaning! They organized and cleaned our entire inventory storage area. Everything is labeled, dust-free, and easily accessible now.
+                </div>
+            </div>
+
+            <!-- Review 81 -->
+            <div class="review-card hidden-review" style="display: none;">
+                <div class="review-header">
+                    <div class="reviewer-avatar">GL</div>
+                    <div class="reviewer-info">
+                        <h3>Grace L.</h3>
+                        <div class="reviewer-location">Hampton, VA</div>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="review-date">20 months ago</span>
+                </div>
+                <div class="review-text">
+                    Exceptional yoga studio cleaning! They maintain the peaceful, clean environment essential for practice. Mats are sanitized, mirrors spotless, and the air always feels fresh and pure.
+                </div>
+            </div>
+
+            <!-- Review 82 -->
+            <div class="review-card hidden-review" style="display: none;">
+                <div class="review-header">
+                    <div class="reviewer-avatar">CD</div>
+                    <div class="reviewer-info">
+                        <h3>Christopher D.</h3>
+                        <div class="reviewer-location">Suffolk, VA</div>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="review-date">21 months ago</span>
+                </div>
+                <div class="review-text">
+                    Amazing funeral home cleaning service! They handle this sensitive work with utmost respect and professionalism. Every detail is perfect, providing comfort during difficult times.
+                </div>
+            </div>
+
+            <!-- Review 83 -->
+            <div class="review-card hidden-review" style="display: none;">
+                <div class="review-header">
+                    <div class="reviewer-avatar">NR</div>
+                    <div class="reviewer-info">
+                        <h3>Nicole R.</h3>
+                        <div class="reviewer-location">Newport News, VA</div>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="review-date">21 months ago</span>
+                </div>
+                <div class="review-text">
+                    Perfect salon and spa cleaning! They sanitize every surface and maintain the luxurious, relaxing atmosphere our clients expect. The treatment rooms are always immaculate.
+                </div>
+            </div>
+
+            <!-- Review 84 -->
+            <div class="review-card hidden-review" style="display: none;">
+                <div class="review-header">
+                    <div class="reviewer-avatar">JS</div>
+                    <div class="reviewer-info">
+                        <h3>Jonathan S.</h3>
+                        <div class="reviewer-location">Portsmouth, VA</div>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="review-date">22 months ago</span>
+                </div>
+                <div class="review-text">
+                    Excellent computer repair shop cleaning! They carefully cleaned around sensitive electronics and organized all the components. Dust-free environment improved our repair success rate.
+                </div>
+            </div>
+
+            <!-- Review 85 -->
+            <div class="review-card hidden-review" style="display: none;">
+                <div class="review-header">
+                    <div class="reviewer-avatar">MH</div>
+                    <div class="reviewer-info">
+                        <h3>Margaret H.</h3>
+                        <div class="reviewer-location">Norfolk, VA</div>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="review-date">22 months ago</span>
+                </div>
+                <div class="review-text">
+                    Outstanding assisted living facility cleaning! They're patient and kind with residents, maintaining dignity while ensuring cleanliness. Families always comment on how nice everything looks.
+                </div>
+            </div>
+
+            <!-- Review 86 -->
+            <div class="review-card hidden-review" style="display: none;">
+                <div class="review-header">
+                    <div class="reviewer-avatar">PK</div>
+                    <div class="reviewer-info">
+                        <h3>Peter K.</h3>
+                        <div class="reviewer-location">Chesapeake, VA</div>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="review-date">23 months ago</span>
+                </div>
+                <div class="review-text">
+                    Amazing brewery cleaning service! They understand food safety requirements and cleaned all our brewing equipment to perfection. Our next batch will be the cleanest yet!
+                </div>
+            </div>
+
+            <!-- Review 87 -->
+            <div class="review-card hidden-review" style="display: none;">
+                <div class="review-header">
+                    <div class="reviewer-avatar">RG</div>
+                    <div class="reviewer-info">
+                        <h3>Rebecca G.</h3>
+                        <div class="reviewer-location">Virginia Beach, VA</div>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="review-date">23 months ago</span>
+                </div>
+                <div class="review-text">
+                    Perfect music venue cleaning! They cleaned around expensive sound equipment and made our venue sparkle for concert nights. Artists always compliment our clean backstage areas.
+                </div>
+            </div>
+
+            <!-- Review 88 -->
+            <div class="review-card hidden-review" style="display: none;">
+                <div class="review-header">
+                    <div class="reviewer-avatar">TW</div>
+                    <div class="reviewer-info">
+                        <h3>Tyler W.</h3>
+                        <div class="reviewer-location">Hampton, VA</div>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="review-date">2 years ago</span>
+                </div>
+                <div class="review-text">
+                    Excellent photography studio cleaning! They cleaned the backdrops, props, and lighting equipment with incredible care. The studio is always camera-ready for our shoots.
+                </div>
+            </div>
+
+            <!-- Review 89 -->
+            <div class="review-card hidden-review" style="display: none;">
+                <div class="review-header">
+                    <div class="reviewer-avatar">LM</div>
+                    <div class="reviewer-info">
+                        <h3>Lauren M.</h3>
+                        <div class="reviewer-location">Suffolk, VA</div>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="review-date">2 years ago</span>
+                </div>
+                <div class="review-text">
+                    Outstanding moving truck cleaning! They cleaned our rental truck inside and out before we returned it. Saved us from extra cleaning fees and made the return process smooth.
+                </div>
+            </div>
+
+            <!-- Review 90 -->
+            <div class="review-card hidden-review" style="display: none;">
+                <div class="review-header">
+                    <div class="reviewer-avatar">BT</div>
+                    <div class="reviewer-info">
+                        <h3>Benjamin T.</h3>
+                        <div class="reviewer-location">Newport News, VA</div>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="review-date">2 years ago</span>
+                </div>
+                <div class="review-text">
+                    Amazing antique shop cleaning! They handled our vintage items with white gloves and cleaned every piece carefully. The shop has never looked more elegant and inviting.
+                </div>
+            </div>
+
+            <!-- Review 91 -->
+            <div class="review-card hidden-review" style="display: none;">
+                <div class="review-header">
+                    <div class="reviewer-avatar">KS</div>
+                    <div class="reviewer-info">
+                        <h3>Kimberly S.</h3>
+                        <div class="reviewer-location">Portsmouth, VA</div>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="review-date">2 years ago</span>
+                </div>
+                <div class="review-text">
+                    Perfect disaster cleanup service! After Hurricane damage, they cleaned debris and water damage from our home. Professional, compassionate, and thorough during a difficult time.
+                </div>
+            </div>
+
+            <!-- Review 92 -->
+            <div class="review-card hidden-review" style="display: none;">
+                <div class="review-header">
+                    <div class="reviewer-avatar">JF</div>
+                    <div class="reviewer-info">
+                        <h3>Jacob F.</h3>
+                        <div class="reviewer-location">Norfolk, VA</div>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="review-date">2 years ago</span>
+                </div>
+                <div class="review-text">
+                    Excellent arcade and game room cleaning! They cleaned every game machine and sanitized all the surfaces kids touch. Parents appreciate the clean, safe environment for their children.
+                </div>
+            </div>
+
+            <!-- Review 93 -->
+            <div class="review-card hidden-review" style="display: none;">
+                <div class="review-header">
+                    <div class="reviewer-avatar">AW</div>
+                    <div class="reviewer-info">
+                        <h3>Amy W.</h3>
+                        <div class="reviewer-location">Chesapeake, VA</div>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="review-date">2 years ago</span>
+                </div>
+                <div class="review-text">
+                    Outstanding camping and RV park facility cleaning! They cleaned all the bathhouses, common areas, and maintained the grounds beautifully. Campers always leave positive reviews about cleanliness.
+                </div>
+            </div>
+
+            <!-- Review 94 -->
+            <div class="review-card hidden-review" style="display: none;">
+                <div class="review-header">
+                    <div class="reviewer-avatar">SC</div>
+                    <div class="reviewer-info">
+                        <h3>Samuel C.</h3>
+                        <div class="reviewer-location">Virginia Beach, VA</div>
+                    </div>
+                </div>
+                <div class="review-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="review-date">2 years ago</span>
+                </div>
+                <div class="review-text">
+                    Amazing specialty cleaning for our coin laundromat! They deep cleaned all machines, floors, and ventilation systems. The place looks and smells fresh - customers love the improvement!
+                </div>
+            </div>
+        </div>
+
+        <!-- Load More Button -->
+        <div class="load-more-container">
+            <button class="load-more-btn" id="loadMoreBtn">
+                <i class="fa-solid fa-plus"></i> Load More Reviews
+            </button>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="cta-section">
+            <h2>Ready to Experience Cleanerella?</h2>
+            <p>Join thousands of satisfied customers who trust us with their cleaning needs!</p>
+            <a href="splash page update.html#book" class="cta-button">
+                <i class="fa-solid fa-sparkles"></i> Book Your Cleaning Today
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // Add smooth scrolling and animations
+        document.addEventListener('DOMContentLoaded', function() {
+            const reviewsGrid = document.querySelector('.reviews-grid');
+            const loadMoreBtn = document.getElementById('loadMoreBtn');
+            let reviewsLoaded = 0;
+            const reviewsPerLoad = 3;
+            
+            // Get all review cards (visible and hidden)
+            const getAllReviewCards = () => document.querySelectorAll('.review-card');
+            const getHiddenReviews = () => document.querySelectorAll('.hidden-review[style*="display: none"]');
+            
+            // Store original review data for sorting (including hidden ones)
+            let reviewsData = [];
+            
+            function updateReviewsData() {
+                const allCards = getAllReviewCards();
+                reviewsData = Array.from(allCards).map(card => {
+                    const reviewerName = card.querySelector('.reviewer-info h3').textContent;
+                    const location = card.querySelector('.reviewer-location').textContent;
+                    const dateText = card.querySelector('.review-date').textContent;
+                    const reviewText = card.querySelector('.review-text').textContent;
+                    const stars = card.querySelectorAll('.stars i').length;
+                    const isHidden = card.classList.contains('hidden-review');
+                    
+                    // Parse date for sorting
+                    let dateValue = 0;
+                    if (dateText.includes('day ago')) {
+                        dateValue = parseInt(dateText.match(/\d+/)?.[0] || 1);
+                    } else if (dateText.includes('week ago')) {
+                        dateValue = parseInt(dateText.match(/\d+/)?.[0] || 1) * 7;
+                    } else if (dateText.includes('month ago')) {
+                        dateValue = parseInt(dateText.match(/\d+/)?.[0] || 1) * 30;
+                    }
+                    
+                    return {
+                        element: card,
+                        name: reviewerName,
+                        location: location,
+                        dateText: dateText,
+                        dateValue: dateValue,
+                        rating: stars,
+                        text: reviewText,
+                        isHidden: isHidden
+                    };
+                });
+            }
+
+            updateReviewsData();
+
+            // Load more reviews functionality
+            loadMoreBtn.addEventListener('click', function() {
+                const hiddenReviews = getHiddenReviews();
+                const reviewsToShow = Math.min(reviewsPerLoad, hiddenReviews.length);
+                
+                for (let i = 0; i < reviewsToShow; i++) {
+                    const review = hiddenReviews[i];
+                    review.style.display = 'block';
+                    review.style.opacity = '0';
+                    review.style.transform = 'translateY(30px)';
+                    
+                    setTimeout(() => {
+                        review.style.opacity = '1';
+                        review.style.transform = 'translateY(0)';
+                    }, i * 150);
+                }
+                
+                reviewsLoaded += reviewsToShow;
+                
+                // Hide button if no more reviews
+                if (getHiddenReviews().length === 0) {
+                    loadMoreBtn.style.display = 'none';
+                }
+                
+                // Update button text
+                const remainingReviews = getHiddenReviews().length;
+                if (remainingReviews > 0) {
+                    loadMoreBtn.innerHTML = `<i class="fa-solid fa-plus"></i> Load More Reviews (${remainingReviews} remaining)`;
+                }
+            });
+
+            // Update button text initially
+            const initialHiddenCount = getHiddenReviews().length;
+            if (initialHiddenCount > 0) {
+                loadMoreBtn.innerHTML = `<i class="fa-solid fa-plus"></i> Load More Reviews (${initialHiddenCount} remaining)`;
+            } else {
+                loadMoreBtn.style.display = 'none';
+            }
+
+            // Animate review cards on scroll
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            function setupCardAnimations() {
+                const visibleCards = document.querySelectorAll('.review-card:not([style*="display: none"])');
+                visibleCards.forEach(card => {
+                    if (!card.style.opacity || card.style.opacity === '1') {
+                        card.style.opacity = '0';
+                        card.style.transform = 'translateY(30px)';
+                    }
+                    card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                    observer.observe(card);
+                });
+            }
+
+            setupCardAnimations();
+
+            // Sort functionality (updated to exclude location)
+            const sortDropdown = document.querySelector('.sort-dropdown');
+            sortDropdown.addEventListener('change', function() {
+                const sortBy = this.value;
+                let sortedReviews = [...reviewsData];
+
+                switch (sortBy) {
+                    case 'newest':
+                        sortedReviews.sort((a, b) => a.dateValue - b.dateValue);
+                        break;
+                    case 'oldest':
+                        sortedReviews.sort((a, b) => b.dateValue - a.dateValue);
+                        break;
+                    case 'highest':
+                        sortedReviews.sort((a, b) => b.rating - a.rating || a.dateValue - b.dateValue);
+                        break;
+                    case 'lowest':
+                        sortedReviews.sort((a, b) => a.rating - b.rating || a.dateValue - b.dateValue);
+                        break;
+                    default:
+                        // Default to newest
+                        sortedReviews.sort((a, b) => a.dateValue - b.dateValue);
+                }
+
+                // Clear the grid and add sorted reviews with animation
+                reviewsGrid.innerHTML = '';
+                
+                sortedReviews.forEach((review, index) => {
+                    setTimeout(() => {
+                        reviewsGrid.appendChild(review.element);
+                        
+                        // Maintain visibility state after sorting
+                        if (review.isHidden && review.element.style.display === 'none') {
+                            review.element.style.display = 'none';
+                        } else {
+                            review.element.style.display = 'block';
+                        }
+                        
+                        // Trigger reflow and animate
+                        review.element.style.opacity = '0';
+                        review.element.style.transform = 'translateY(30px)';
+                        setTimeout(() => {
+                            if (review.element.style.display !== 'none') {
+                                review.element.style.opacity = '1';
+                                review.element.style.transform = 'translateY(0)';
+                            }
+                        }, 50);
+                    }, index * 50); // Faster stagger for sorting
+                });
+                
+                // Update load more button after sorting
+                setTimeout(() => {
+                    const hiddenAfterSort = getHiddenReviews().length;
+                    if (hiddenAfterSort > 0) {
+                        loadMoreBtn.style.display = 'block';
+                        loadMoreBtn.innerHTML = `<i class="fa-solid fa-plus"></i> Load More Reviews (${hiddenAfterSort} remaining)`;
+                    } else {
+                        loadMoreBtn.style.display = 'none';
+                    }
+                }, sortedReviews.length * 50 + 100);
+            });
+        });
+    </script>
+</body>
+</html>
